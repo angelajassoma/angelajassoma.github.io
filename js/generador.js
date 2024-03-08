@@ -5,6 +5,8 @@ const botonGenerar = document.querySelector(".btn-generar");
 const contenedorQR = document.querySelector(".qrcode");
 const botonDescargar = document.querySelector(".btn-descargar");
 const aviso = document.querySelector(".text-aviso");
+const serieTabla = document.querySelector(".serie-tabla");
+const fechaTabla = document.querySelector(".fecha-tabla");
 
 let QR;
 //---Principal---//
@@ -18,6 +20,8 @@ botonGenerar.addEventListener("click", e => {
     } else {
         generarCodigoQR(textqr);
         botonDescargar.style.display = "block";
+        serieTabla.innerHTML = numberInput.value;
+        fechaTabla.innerHTML = textInput.value;
     }
 });
 
