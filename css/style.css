@@ -1,0 +1,122 @@
+/*global CSS*/
+:root {
+    --white: #ffffff;
+    --primary: #ffbe98;
+    --secondary: #feece2;
+    --tertiary: #f7ded0;
+    --four:#e2bfb3;
+    --black:#000000;
+    --RGBA: rgba(0,0,0,.1);
+    --gradient: linear-gradient(90deg, var(--primary), var(--secondary));
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+::selection {
+    background: var(--four);
+    color: var(--white);
+}
+
+/* Principal */
+main {
+    background: var(--gradient);
+}
+.contenedor {
+    width: 800px;
+    height: 95vh;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    background: var(--white);
+    box-shadow: -1px -1px 20px var(--primary);
+}
+
+form {
+    align-items: center;
+    background: var(--white);
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.form-titulo {
+    font-size: 24px;
+    background: var(--white);
+    color: var(--black);
+}
+
+.number-input {
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid var(--four);
+    border-radius: 5px;
+    background: var(--white);
+    font-size: 15px;
+    height: 32px;
+    font-weight: 500;
+    outline: none;
+}
+.text-input {
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid var(--four);
+    border-radius: 5px;
+    background: var(--white);
+    font-size: 15px;
+    height: 32px;
+    font-weight: 500;
+    outline: none;
+}
+
+.text-input::placeholder {
+    color: var(--black);
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 20px;
+    font-size: 15px;
+    font-weight: 600;
+    outline: none;
+    background: var(--primary);
+    color: var(--white);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 1px 12px var(--RGBA);
+    transition: all .3s linear;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+.btn-descargar {
+    display: none;
+}
+
+canvas {
+    display: none;
+}
+
+img {
+    height: 180px;
+    border: none;
+}
+
+.qrcode {
+    background: var(--white);
+}
+
+/*Media*/
+@media(max-width: 910px) {
+    .contenedor {
+        width: 100%;
+    }
+}
