@@ -13,6 +13,8 @@
 * {
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 ::selection {
@@ -97,22 +99,62 @@ button:hover {
     transform: scale(1.1);
 }
 
+.table-qrcode {
+    display: flex;
+    width: 12.5cm;
+    height: 4.5cm;
+    border: 1px solid black;
+    padding: 0.5cm 0 0;
+}
+
+.logo {
+    width: 7.5cm;
+    height: 0.6cm;
+    margin: 0 0.5cm;
+}
+
+.name {
+    width: 7.5cm;
+    height: 0.4cm;
+    border: 1px solid black;
+    padding: 0;
+    margin: 0 0.5cm 0.1cm;
+    font-size: 12px;
+    text-align: center;
+    font-weight: bold;
+}
+
 table {
-    width: 100%;
+    width: 7.5cm;
+    height: 1.2cm;
     border-collapse: collapse;
-    margin: 20px 0;
+    margin: 0 0.5cm;
+    font-size: 12px;
   }
 
-  th, td {
-    border: 1px solid #dddddd;
+  td {
+    border: 1px solid #000000;
+    width: 50%;
+  }
+
+  .a1, .a2, .a3 {
     text-align: left;
-    padding: 8px;
   }
 
-  th {
-    background-color: #f2f2f2;
+  .b1, .b2, .b3 {
+    text-align: center;
+  }
+  .a1, .b1 {
+    height: 0.6cm;
   }
 
+  .a2, .b2 {
+    height: 0.3cm;
+  }
+  
+  .a3, .fecha-tabla { 
+    height: 0.3cm;
+  }
 .btn-descargar {
     display: none;
 }
@@ -122,7 +164,8 @@ canvas {
 }
 
 img {
-    height: 180px;
+    width: 3.5cm;
+    height: 3.5cm;
     border: none;
 }
 

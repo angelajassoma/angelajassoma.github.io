@@ -13,7 +13,7 @@ let QR;
 botonGenerar.addEventListener("click", e => {
     e.preventDefault();
     const texto = textInput.value;
-    const textqr = "|Fecha de Fabricacion:" + textInput.value + "|No. de Serie:" + numberInput.value + "|Sistema de Sujeción: 2 X 6000 LBS X 12 FT C/ Matraca y 2 broches tipo E |Capacidad de Carga : 2,000 LBS DE RESISTENCIA|Uso preventivo : No exponer a Acidos y Superficies con filo|"; 
+    const textqr = "|Fecha de Fabricacion:" + textInput.value + "|No. de Serie:" + numberInput.value + "|Sistema de Sujecion: 2 X 6000 LBS X 12 FT C/ Matraca y 2 broches tipo E |Capacidad de Carga : 2,000 LBS DE RESISTENCIA|Uso preventivo : No exponer a Acidos y Superficies con filo|"; 
     
     if(!texto) {
         mostrarAviso("No has ingresado ningun texto.");
