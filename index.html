@@ -1,50 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <title>Generador de código QR</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio de Sesión</title>
+  <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-    <!--Principal-->
     <main>
-        <div class="contenedor"> 
-            <form>
-                <h1 class="form-titulo">Generador de código QR</h1>
-                <p class="text-aviso"></p>
-                <input type="number" class="number-input" placeholder="Ingresa el número de serie">
-                <input type="text" class="text-input" placeholder="Ingresa la fecha dd/mm/aaaa">
-                <button class="btn-generar">Generar código QR</button>
-                <div class="table-qrcode" id="table">
-                  <div class="table">
-                    <img src="./image/logo.png" alt="logo" class="logo">
-                    <div class="name">PAQUETEXPRESS</div>
-                    <table>
-                        <tbody>
-                          <tr>
-                            <td class="a1">Capacidad de Carga:</td>
-                            <td class="b1">2,000 LBS DE RESISTENCIA</td>
-                          </tr>
-                          <tr>
-                            <td class="a2">No. de Serie:</td>
-                            <td class="serie-tabla b2"></td>
-                          </tr>
-                          <tr>
-                            <td class="a3">Fecha de Fabricación:</td>
-                            <td class="fecha-tabla b3"></td>
-                          </tr>
-                        </tbody>
-                      </table>
-                  </div>
-                  <div class="qrcode"></div>
-                </div>
-                <button class="btn-descargar">Descargar código QR</button>
+        <div class="login-container">
+            <h2>Iniciar Sesión</h2>
+            <form id="login-form">
+              <div class="input-group">
+                <label for="username">Nombre de Usuario:</label>
+                <input type="text" id="username" name="username" required>
+              </div>
+              <div class="input-group">
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" required>
+              </div>
+              <button type="submit">Iniciar Sesión</button>
             </form>
-        </div>
+            <div id="error-message"></div>
+          </div>
+        
     </main>
-    <script src="https://cdn.jsdelivr.net/npm/qrious"></script>
-    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
-    <script src="./js/generador.js"></script>
+  
+  <script src="./js/script.js"></script>
 </body>
 </html>
