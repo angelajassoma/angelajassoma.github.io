@@ -70,36 +70,6 @@ botonGenerar.addEventListener("click", e => {
     
 });
 
-
-
-// Función para generar el código QR
-/*function generarCodigoQR(texto) {
-    if (QR) {
-        QR.clear();
-    }
-
-    QR = new QRious({
-        value: texto,
-        size: 228
-    });
-    contenedorQR.innerHTML = "";
-    contenedorQR.appendChild(QR.image);
-}*/
-/*botonGenerar.addEventListener("click", e => {
-    e.preventDefault();
-    const texto = serieInicialInput.value;
-    const textqr = "|Fecha de Fabricacion:" + serieInicialInput.value + "|No. de Serie:" + fecha.value + "|Sistema de Sujecion: 2 X 6000 LBS X 12 FT C/ Matraca y 2 broches tipo E |Capacidad de Carga : 2,000 LBS DE RESISTENCIA|Uso preventivo : No exponer a Acidos y Superficies con filo|"; 
-    
-    if(!texto) {
-        mostrarAviso("No has ingresado ningun texto.");
-    } else {
-        generarCodigoQR(textqr);
-        botonDescargar.style.display = "block";
-        serieTabla.innerHTML = serieInicialInput.value;
-        fechaTabla.innerHTML = fecha.value;
-    }
-});*/
-
 /*botonDescargar.addEventListener("click", () => {
     descargarCodigoQR();
 });*/
@@ -125,16 +95,4 @@ botonGenerar.addEventListener("click", e => {
         link.download = "codigo_qr.png";
         link.click();
     }
-}*/
-
-/*function mostrarAviso(mensaje) {
-    aviso.style.color = "#ffbe98";
-    aviso.style.background = "none";
-    aviso.style.fontWeight = "800";
-    aviso.textContent = mensaje;
-    aviso.style.visibility = "visible";
-
-    setTimeout(() => {
-        aviso.style.display = "none";
-    }, 3000);
 }*/
