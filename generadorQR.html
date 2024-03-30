@@ -13,38 +13,22 @@
             <form>
                 <h1 class="form-titulo">Generador de código QR</h1>
                 <p class="text-aviso"></p>
-                <input type="number" class="number-input" placeholder="Ingresa el número de serie">
-                <input type="text" class="text-input" placeholder="Ingresa la fecha dd/mm/aaaa">
+                <label for="serie-inicial">Número de Serie Inicial:</label>
+                <input type="number" class="number-input" id="serie-inicial" placeholder="Ingresa el número de serie">
+                <label for="serie-final">Número de Serie final:</label>
+                <input type="number" class="number-input" id="serie-final" placeholder="Ingresa el número de serie">
+                <label for="fecha">Fecha de Fabricación:</label>
+                <input type="text" class="text-input" id="fecha" placeholder="Ingresa la fecha dd/mm/aaaa">
                 <button class="btn-generar">Generar código QR</button>
-                <div class="table-qrcode" id="table">
-                  <div class="table">
-                    <img src="./image/logo.png" alt="logo" class="logo">
-                    <div class="name">PAQUETEXPRESS</div>
-                    <table>
-                        <tbody>
-                          <tr>
-                            <td class="a1">Capacidad de Carga:</td>
-                            <td class="b1">2,000 LBS DE RESISTENCIA</td>
-                          </tr>
-                          <tr>
-                            <td class="a2">No. de Serie:</td>
-                            <td class="serie-tabla b2"></td>
-                          </tr>
-                          <tr>
-                            <td class="a3">Fecha de Fabricación:</td>
-                            <td class="fecha-tabla b3"></td>
-                          </tr>
-                        </tbody>
-                      </table>
-                  </div>
-                  <div class="qrcode"></div>
-                </div>
-                <button class="btn-descargar">Descargar código QR</button>
+                <button class="btn-descargar">Descargar</button>
+                
+                <div id="table"></div>
             </form>
         </div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/qrious"></script>
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
     <script src="./js/generador.js"></script>
 </body>
 </html>

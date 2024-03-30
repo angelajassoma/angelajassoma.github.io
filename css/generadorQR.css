@@ -24,16 +24,14 @@
 
 /* Principal */
 main {
-    background: var(--gradient);
+    background: var(--four);
 }
 .contenedor {
     width: 800px;
-    height: 95vh;
     margin: 0 auto;
     padding: 20px;
     border-radius: 10px;
     background: var(--white);
-    box-shadow: -1px -1px 20px var(--primary);
 }
 
 form {
@@ -51,7 +49,7 @@ form {
     color: var(--black);
 }
 
-.number-input {
+.number-input, .text-input {
     width: 50%;
     padding: 10px;
     margin-bottom: 10px;
@@ -63,12 +61,10 @@ form {
     font-weight: 500;
     outline: none;
 }
-.text-input {
+label {
     width: 50%;
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid var(--four);
-    border-radius: 5px;
     background: var(--white);
     font-size: 15px;
     height: 32px;
@@ -129,7 +125,7 @@ table {
     height: 1.2cm;
     border-collapse: collapse;
     margin: 0 0.5cm;
-    font-size: 12px;
+    font-size: 12px;   
   }
 
   td {
