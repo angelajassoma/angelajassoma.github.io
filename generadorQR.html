@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/generadorQR.css">
     <title>Generador de código QR</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
 </head>
 <body>
     <!--Principal-->
     <main>
         <div class="contenedor"> 
             <form>
-                <h1 class="form-titulo">Generador de código QR</h1>
+                <h1 class="form-titulo" id="titulo">Generador de código QR</h1>
                 <p class="text-aviso"></p>
                 <label for="serie-inicial">Número de Serie Inicial:</label>
                 <input type="number" class="number-input" id="serie-inicial" placeholder="Ingresa el número de serie">
@@ -20,15 +21,16 @@
                 <label for="fecha">Fecha de Fabricación:</label>
                 <input type="text" class="text-input" id="fecha" placeholder="Ingresa la fecha dd/mm/aaaa">
                 <button class="btn-generar">Generar código QR</button>
-                <button class="btn-descargar">Descargar</button>
                 
-                <div id="table"></div>
+                <div id="contenido-pdf">
+                    <div id="table"></div>
+                </div>
+                
             </form>
+            <button class="btn-descargar" id="btnCrearPdf">Descargar</button>
         </div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/qrious"></script>
-    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="./js/generador.js"></script>
 </body>
 </html>

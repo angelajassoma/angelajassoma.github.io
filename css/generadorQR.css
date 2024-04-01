@@ -151,9 +151,6 @@ table {
   .a3, .fecha-tabla { 
     height: 0.3cm;
   }
-.btn-descargar {
-    display: none;
-}
 
 canvas {
     display: none;
