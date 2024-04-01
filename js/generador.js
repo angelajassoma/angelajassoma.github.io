@@ -30,7 +30,7 @@ function generarTablasYQR() {
     for (let i = serieInicial; i <= serieFinal; i++) {
       // Crear la tabla
       const tablaHTML = `
-              <div class="table-qrcode" id="table${i}" style="margin-bottom: 1cm;">
+              <div class="table-qrcode" id="table${i}" style="margin: 1.03cm;">
                   <div class="table">
                       <img src="./image/logo.png" alt="logo" class="logo">
                       <div class="name">PAQUETEXPRESS</div>
@@ -88,9 +88,9 @@ function generarTablasYQR() {
     const opciones = {
         margin: 1,
         filename: 'contenido.pdf',
-        image: { type: 'jpeg', quality: 0.98 },
+        image: { type: 'jpeg', quality: 0.99 },
         html2canvas: { scale: 3, letterRendering: true },
-        jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
+        jsPDF: { unit: 'cm', format: 'a4', orientation: 'portrait' }
     };
 
     // Convertir el contenido HTML a PDF y descargarlo

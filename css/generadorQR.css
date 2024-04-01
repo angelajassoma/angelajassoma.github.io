@@ -105,7 +105,7 @@ button:hover {
 
 .logo {
     width: 7.5cm;
-    height: 0.6cm;
+    height: 0.8cm;
     margin: 0 0.5cm;
 }
 
@@ -135,6 +135,7 @@ table {
 
   .a1, .a2, .a3 {
     text-align: left;
+    padding: 0.05cm;
   }
 
   .b1, .b2, .b3 {
