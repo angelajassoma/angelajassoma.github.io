@@ -21,8 +21,10 @@ function generarCodigoQR(texto, contenedorQR) {
 
 // Definir la función para generar las tablas con códigos QR
 function generarTablasYQR() {
-    // Limpiar el contenido anterior
-    contenedor.innerHTML = "";
+    // Limpiar columnas antes de generar nuevas tablas y códigos QR
+    document.getElementById('columna1').innerHTML = '';
+    document.getElementById('columna2').innerHTML = '';
+
 
 
     // Obtener los valores de los inputs y convertirlos a números enteros
@@ -33,33 +35,37 @@ function generarTablasYQR() {
     for (let i = serieInicial; i <= serieFinal; i++) {
       // Crear la tabla
       const tablaHTML = `
-              <div class="table-qrcode" id="table${i}" style="margin: 1.03cm;">
-                  <div class="table">
-                      <img src="./image/logo.png" alt="logo" class="logo">
-                      <div class="name">PAQUETEXPRESS</div>
-                      <table>
-                          <tbody>
-                              <tr>
-                                  <td class="a1">Capacidad de Carga:</td>
-                                  <td class="b1">2,000 LBS DE RESISTENCIA</td>
-                              </tr>
-                              <tr>
-                                  <td class="a2">No. de Serie:</td>
-                                  <td class="serie-tabla b2">${i}</td>
-                              </tr>
-                              <tr>
-                                  <td class="a3">Fecha de Fabricación:</td>
-                                  <td class="fecha-tabla b3">${fecha.value}</td>
-                              </tr>
-                          </tbody>
-                      </table>
+            <div class="table-table" >
+              <div class="table-qrcode" id="table${i}" style="margin: 0.3cm;">
+                 <div class="table">
+                    <img src="./image/logo.png" alt="logo" class="logo">
+                    <div class="name">PAQUETEXPRESS</div>
+                    <table>
+                      <tbody>
+                        <tr>
+                            <td class="a1">Capacidad de Carga:</td>
+                            <td class="b1">2,000 LBS DE RESISTENCIA</td>
+                        </tr>
+                        <tr>
+                            <td class="a2">No. de Serie:</td>
+                            <td class="serie-tabla b2">${i}</td>
+                        </tr>
+                        <tr>
+                            <td class="a3">Fecha de Fabricación:</td>
+                            <td class="fecha-tabla b3">${fecha.value}</td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
                   <div class="qrcode" id="qr${i}"></div>
-              </div>
+                  </div>
+            </div>
+              
           `;
   
-      // Agregar la tabla al contenedor
-      contenedor.innerHTML += tablaHTML;
+      // Agregar la tabla a una de las columnas (alternando entre columna1 y columna2)
+      const columna = i % 2 === 0 ? 'columna2' : 'columna1';
+      document.getElementById(columna).innerHTML += tablaHTML;
   
       // Generar el código QR para esta tabla
       const textoQR =
@@ -85,7 +91,7 @@ function generarTablasYQR() {
  // Escuchar el click del botón
  document.getElementById('btnCrearPdf').addEventListener('click', () => {
     // Obtener el contenido HTML que deseas convertir
-    const elementoParaConvertir = document.getElementById('contenido-pdf');
+    const elementoParaConvertir = document.getElementById('columnas');
 
     // Configurar las opciones de conversión
     const opciones = {
@@ -93,7 +99,7 @@ function generarTablasYQR() {
         filename: 'contenido.pdf',
         image: { type: 'jpeg', quality: 0.99 },
         html2canvas: { scale: 3, letterRendering: true },
-        jsPDF: { unit: 'cm', format: 'a4', orientation: 'portrait' }
+        jsPDF: { unit: 'cm', format: 'a4', orientation: 'landscape' }
     };
 
     // Convertir el contenido HTML a PDF y descargarlo
