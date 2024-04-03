@@ -21,7 +21,10 @@ function generarCodigoQR(texto, contenedorQR) {
 
 // Definir la función para generar las tablas con códigos QR
 function generarTablasYQR() {
-    
+    // Limpiar el contenido anterior
+    contenedor.innerHTML = "";
+
+
     // Obtener los valores de los inputs y convertirlos a números enteros
     const serieInicial = parseInt(serieInicialInput.value);
     const serieFinal = parseInt(serieFinalInput.value);
