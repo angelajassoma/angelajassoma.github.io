@@ -136,6 +136,7 @@ table {
   .a1, .a2, .a3 {
     text-align: left;
     padding: 0.05cm;
+    border-right: none;
   }
 
   .b1, .b2, .b3 {
@@ -147,6 +148,8 @@ table {
 
   .a2, .b2 {
     height: 0.3cm;
+    border-top: none;
+    border-bottom: none;
   }
   
   .a3, .fecha-tabla { 
