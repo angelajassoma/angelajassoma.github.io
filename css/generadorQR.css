@@ -103,15 +103,15 @@ button:hover {
 .table-qrcode {
     display: flex;
     width: 12.5cm;
-    height: 4.5cm;
+    height: 4.1cm;
     border: 1px solid black;
-    padding: 0.5cm 0 0;
+    padding: 0.2cm 0 0;
 }
 
 .logo {
     width: 7.5cm;
     height: 0.8cm;
-    margin: 0 0.5cm;
+    margin: 0 0.3cm;
 }
 
 .name {
@@ -166,8 +166,8 @@ canvas {
 }
 
 img {
-    width: 3cm;
-    height: 3cm;
+    width: 3.5cm;
+    height: 3.5cm;
     border: none;
 }
 

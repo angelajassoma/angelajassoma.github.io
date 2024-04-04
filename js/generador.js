@@ -97,7 +97,7 @@ function generarTablasYQR() {
     const opciones = {
         margin: 1,
         filename: 'contenido.pdf',
-        image: { type: 'jpeg', quality: 0.99 },
+        image: { type: 'jpeg', quality: 0.90 },
         html2canvas: { scale: 3, letterRendering: true },
         jsPDF: { unit: 'cm', format: 'a4', orientation: 'landscape' }
     };
