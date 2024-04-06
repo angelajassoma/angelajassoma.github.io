@@ -1,0 +1,67 @@
+/*global CSS*/
+:root {
+    --white: #ffffff;
+    --primary: #ffbe98;
+    --secondary: #feece2;
+    --tertiary: #f7ded0;
+    --four:#e2bfb3;
+    --black:#000000;
+    --RGBA: rgba(0,0,0,.1);
+    --gradient: linear-gradient(90deg, var(--primary), var(--secondary));
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+::selection {
+    background: var(--four);
+    color: var(--white);
+}
+
+/* Principal */
+body {
+    background: var(--gradient);
+
+}
+
+.opciones {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+  
+  h2 {
+    text-align: center;
+    margin: 40px;
+  }
+
+  button {
+    width: 100%;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 20px;
+    font-size: 15px;
+    font-weight: 600;
+    outline: none;
+    background: var(--primary);
+    color: var(--white);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 1px 12px var(--RGBA);
+    transition: all .3s linear;
+  }
+  
+  button:hover {
+    transform: scale(1.1);
+  }
+  

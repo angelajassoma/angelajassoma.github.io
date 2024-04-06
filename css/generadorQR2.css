@@ -94,7 +94,6 @@ button:hover {
 
 .table-table {
     border: 1px solid black;
-    padding: 0 0.35cm;
 }
 
 .table-qrcode {
@@ -103,31 +102,19 @@ button:hover {
     height: 4.1cm;
     border: 1px solid black;
     padding: 0.2cm 0 0;
-    
 }
 
 .logo {
-    width: 7.5cm;
-    height: 0.8cm;
+    width: 4cm;
+    height: 1.5cm;
     margin: 0 0.3cm;
 }
 
-.name {
-    width: 7.5cm;
-    height: 0.4cm;
-    border: 1px solid black;
-    padding: 0;
-    margin: 0 0.5cm 0.1cm;
-    font-size: 12px;
-    text-align: center;
-    font-weight: bold;
-}
-
 table {
-    width: 7.5cm;
+    width: 8cm;
     height: 1.2cm;
     border-collapse: collapse;
-    margin: 0 0.5cm;
+    margin: 0 0.2cm;
     font-size: 12px;   
   }
 
@@ -136,7 +123,7 @@ table {
     width: 50%;
   }
 
-  .a1, .a2, .a3 {
+  .a1, .a2, .a3, .a4 {
     text-align: left;
     padding: 0.05cm;
     border-right: none;
@@ -157,6 +144,10 @@ table {
   
   .a3, .fecha-tabla { 
     height: 0.3cm;
+  }
+
+  .a3, .b3 {
+    border-bottom: none;
   }
 
 canvas {
