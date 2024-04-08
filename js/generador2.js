@@ -39,7 +39,7 @@ function generarTablasYQR() {
             <div class="table-table" >
               <div class="table-qrcode" id="table${i}" style="margin: 0.3cm;">
                  <div class="table">
-                    <img src="./image/logo-pitic.png" alt="logo" class="logo">
+                    <img src="./image/logop.png" alt="logo" class="logo">
                     <table>
                       <tbody>
                         <tr>
