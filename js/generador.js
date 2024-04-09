@@ -36,7 +36,7 @@ function generarTablasYQR() {
       // Crear la tabla
       const tablaHTML = `
             <div class="table-table" >
-              <div class="table-qrcode" id="table${i}" style="margin: 0.3cm;">
+              <div class="table-qrcode" id="table${i}" style="margin: 0.2985cm 0 0.2985cm 0.3cm;">
                  <div class="table">
                     <img src="./image/logo.png" alt="logo" class="logo">
                     <div class="name">PAQUETEXPRESS</div>
