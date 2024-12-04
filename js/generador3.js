@@ -44,7 +44,7 @@ function generarTablasYQR() {
                       <tbody>
                         <tr>
                             <td class="a1">Sistema de Sujeción:</td>
-                            <td class="b1">2 X 6000 LB X 12 FT C/ Matraca y 2 broches tipo E</td>
+                            <td class="b1">Tensor Naylon 2"X30'X12,000 LBS C/gancho JJ</td>
                         </tr>
                         <tr>
                             <td class="a2">No. de Serie:</td>
@@ -79,7 +79,7 @@ function generarTablasYQR() {
         i +
         "|Region:"+
         region.value +
-        "|Sistema de Sujecion: 2 X 6000 LB X 12 FT C/ Matraca y 2 broches tipo E|Capacidad de Carga : 2,000 LBS|Uso preventivo : No exponer a Acidos y Superficies con filo|";
+        "|Sistema de Sujecion: Tensor Naylon 2\"X30'X12,000 LBS C/gancho JJ|Capacidad de Carga : 3,335 lb/1,513 kg|Uso preventivo : No exponer a Acidos y Superficies con filo|";
   
       const contenedorQR = document
         .getElementById(`table${i}`)
