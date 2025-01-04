@@ -1,82 +1,92 @@
 /*global CSS*/
 :root {
-    --white: #ffffff;
-    --primary: #ffbe98;
-    --secondary: #feece2;
-    --tertiary: #f7ded0;
-    --four:#e2bfb3;
-    --black:#000000;
-    --RGBA: rgba(0,0,0,.1);
-    --gradient: linear-gradient(90deg, var(--primary), var(--secondary));
+  --s: 10%;
+  --background-color: hsl(0, var(--s), 95%);
+  --buttom-color: hsl(328, var(--s), 45%);
+  --text-color: hsl(200, var(--s), 15%);
+  --color-qr: hsl(0, var(--s), 85%);
 }
 
 * {
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Open sans, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
 }
 
 ::selection {
-    background: var(--four);
-    color: var(--white);
+    background: var(--background-color);
+    color: var(--background-color);
 }
+
 
 /* Principal */
 body {
-    background: var(--gradient);
+  margin: 0;
+  height: 100vh; /* Ocupa toda la altura de la ventana */
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dos filas iguales */
+}
 
+aside {
+  background-color: var(--buttom-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 40% 40% 0;
+  margin-right: 1rem;
+}
+
+main {
+  background-color: var(--backgroud-color);
 }
 
 .login-container {
-    width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    border-radius: 5px;
+    width: 100%;
+    display: flex;
     align-items: center;
     justify-content: center;
-    display: flex;
     flex-direction: column;
     height: 100vh;
 }
   
-  h2 {
+  h1 {
     text-align: center;
-    margin: 40px;
+    margin: 2.5rem;
   }
   
   .input-group {
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
+
   }
   
   .input-group label {
-    display: block;
-    margin-bottom: 5px;
+    display: flex;
+    margin: 0.5rem;
   }
   
   .input-group input {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid var(--four);
-    border-radius: 5px;
-    background: var(--white);
-    font-size: 15px;
-    height: 32px;
-    font-weight: 500;
+    border: 5px solid var(--buttom-color);
+    border-radius: 10px;
+    background: var(--backgroud-color);
+    font-size: 1.5rem;
+    height: 2.5rem;
+    font-weight: 25rem;
     outline: none;
   }
   
   button {
-    width: 100%;
-    padding: 10px 20px;
+    width: 20rem;
+    padding: 10px;
     cursor: pointer;
     margin: 20px;
-    font-size: 15px;
-    font-weight: 600;
+    font-size: 1rem;
     outline: none;
-    background: var(--primary);
-    color: var(--white);
+    background: var(--buttom-color);
+    color: var(--color-qr);
     border: none;
     border-radius: 15px;
     box-shadow: 0 1px 12px var(--RGBA);
