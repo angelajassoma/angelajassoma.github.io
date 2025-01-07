@@ -1,14 +1,13 @@
 /*global CSS*/
 :root {
-    --white: #ffffff;
-    --primary: #ffbe98;
-    --secondary: #feece2;
-    --tertiary: #f7ded0;
-    --four:#e2bfb3;
-    --black:#000000;
-    --RGBA: rgba(0,0,0,.1);
-    --gradient: linear-gradient(90deg, var(--primary), var(--secondary));
-}
+    --h: 0;
+    --s: 10%;
+    --background-color: hsl(var(--h), var(--s), 95%);
+    --buttom-color: hsl(328, var(--s), 45%);
+    --text-color: hsl(200, var(--s), 15%);
+    --color-qr: hsl(var(--h), var(--s), 85%);
+  }
+
 
 * {
     box-sizing: border-box;
@@ -24,44 +23,94 @@
 
 /* Principal */
 body {
-    background: var(--gradient);
+    background: var(--buttom-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 }
 
 .opciones {
-    width: 400px;
-    margin: 0 auto;
+    width: 600px;
+    margin: 40px;
     padding: 20px;
     border-radius: 5px;
+    flex-direction: column;
+    height: 80vh;
+    display: flex;
     align-items: center;
     justify-content: center;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
+    background-color: var(--background-color);
+    box-shadow:  var(--color-qr);
 }
   
   h2 {
     text-align: center;
     margin: 40px;
+    color: var(--text-color);
   }
 
-  button {
-    width: 100%;
-    padding: 10px 20px;
-    cursor: pointer;
-    margin: 20px;
-    font-size: 15px;
+  /*  button */
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .animated-button {
+    margin: 1rem;
+    width: 200px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 16px 36px;
+    border: 4px solid;
+    border-color: transparent;
+    font-size: 16px;
+    background-color: inherit;
+    border-radius: 100px;
     font-weight: 600;
-    outline: none;
-    background: var(--primary);
-    color: var(--white);
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 1px 12px var(--RGBA);
-    transition: all .3s linear;
+    color: var(--buttom-color);
+    box-shadow: 0 0 0 2px var(--buttom-color);
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
   }
   
-  button:hover {
-    transform: scale(1.1);
+  .animated-button .circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background-color: var(--buttom-color);
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .animated-button .text {
+    position: relative;
+    z-index: 1;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .animated-button:hover {
+    box-shadow: 0 0 0 12px transparent;
+    color: var(--background-color);
+    border-radius: 12px;
+  }
+  
+  .animated-button:active {
+    scale: 0.95;
+    box-shadow: 0 0 0 4px var(--color-qr);
+  }
+  
+  .animated-button:hover .circle {
+    width: 220px;
+    height: 220px;
+    opacity: 1;
   }
   
