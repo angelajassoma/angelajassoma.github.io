@@ -7,7 +7,10 @@
     --four:#e2bfb3;
     --black:#000000;
     --RGBA: rgba(0,0,0,.1);
-    --gradient: linear-gradient(90deg, var(--primary), var(--secondary));
+    --h: 0;
+    --s: 10%;
+    --background-color: hsl(var(--h), var(--s), 95%);
+    --buttom-color: hsl(328, var(--s), 45%);
 }
 
 * {
@@ -49,7 +52,7 @@ form {
     width: 50%;
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid var(--four);
+    border: 1px solid var(--buttom-color);
     border-radius: 5px;
     background: var(--white);
     font-size: 15px;
@@ -79,8 +82,8 @@ button {
     font-size: 15px;
     font-weight: 600;
     outline: none;
-    background: var(--primary);
-    color: var(--white);
+    background: var(--buttom-color);
+    color: var(--background-color);
     border: none;
     border-radius: 15px;
     box-shadow: 0 1px 12px var(--RGBA);
