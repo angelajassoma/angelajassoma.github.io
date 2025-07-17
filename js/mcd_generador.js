@@ -103,7 +103,7 @@ function generarTablasYQR() {
     const textoQR =
       "|Fecha de Fabricacion:" +
       fechaFormateada +
-      " |No. de Serie:" + "Eco. " + 
+      " |No. de Serie: " + "Eco. " + 
       numeroSerie +
       " |Sistema de Sujecion: Red de carga " +
       carga.value +
