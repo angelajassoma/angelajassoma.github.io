@@ -68,7 +68,7 @@ function generarTablasYQR() {
                       <tbody>
                         <tr>
                             <td class="a1">RED DE CARGA:</td>
-                            <td class="carga b1">${carga.value}</td>
+                            <td class="carga b1">${carga.value}<span> m</span></td>
                         </tr>
                         <tr>
                             <td class="a2">Capacidad de Carga:</td>
