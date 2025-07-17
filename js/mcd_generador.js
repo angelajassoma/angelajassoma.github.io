@@ -76,7 +76,7 @@ function generarTablasYQR() {
                         </tr>
                         <tr>
                             <td class="a3">No. de Serie:</td>
-                            <td class="serie-tabla b3">${numeroSerie}</td>
+                            <td class="serie-tabla b3"><span>Eco. </span>${numeroSerie}</td>
                         </tr>
                         <tr>
                             <td class="a4">Unidad:</td>
@@ -103,7 +103,7 @@ function generarTablasYQR() {
     const textoQR =
       "|Fecha de Fabricacion:" +
       fechaFormateada +
-      " |No. de Serie:" +
+      " |No. de Serie:" + "Eco. " + 
       numeroSerie +
       " |Sistema de Sujecion: Red de carga " +
       carga.value +
