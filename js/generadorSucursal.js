@@ -54,7 +54,7 @@ function generarTablasYQR() {
                             <td class="fecha-tabla b3">${fecha.value}</td>
                         </tr>
                         <tr>
-                            <td class="a3">Sucursal:</td>
+                            <td class="a3">Ubicación:</td>
                             <td class="b3">${sucursal.value}</td>
                         </tr>
                       </tbody>
@@ -76,7 +76,7 @@ function generarTablasYQR() {
       fecha.value +
       "|No. de Serie:" +
       i +
-      "|Sucursal: " +
+      "|Ubicacion: " +
       sucursal.value +
       "|Sistema de Sujecion: 2 X 6000 LBS X 12 FT C/ Matraca y 2 broches tipo E |Capacidad de Carga : 2,000 LBS DE RESISTENCIA|Uso preventivo : No exponer a Acidos y Superficies con filo|";
 
