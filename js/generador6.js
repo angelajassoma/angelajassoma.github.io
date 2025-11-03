@@ -2,6 +2,7 @@
 const serieInicialInput = document.getElementById("serie-inicial");
 const serieFinalInput = document.getElementById("serie-final");
 const fecha = document.getElementById("fecha");
+const red = document.getElementById("red");
 const botonGenerar = document.querySelector(".btn-generar");
 const contenedorQR = document.querySelector(".qrcode");
 const botonDescargar = document.querySelector(".btn-descargar");
@@ -52,6 +53,10 @@ function generarTablasYQR() {
                             <td class="a3">Fecha de Fabricación:</td>
                             <td class="fecha-tabla b3">${fecha.value}</td>
                         </tr>
+                         <tr>
+                            <td class="a3">Red de Carga:</td>
+                            <td class="b3">${red.value}</td>
+                        </tr>
                       </tbody>
                     </table>
                   </div>
@@ -71,7 +76,9 @@ function generarTablasYQR() {
       fecha.value +
       "|No. de Serie:" +
       i +
-      "|Sistema de Sujecion: Red de carga 2.34 x 1.92 M C/ 3 Matracas y 6 Broches tipo E|Capacidad de Carga : 4,000 LBS|Uso preventivo:No exponer a Acidos y Superficies con filo|";
+      "|Sistema de Sujecion: Red de carga " +
+      red.value +
+      " M C/ 3 Matracas y 6 Broches tipo E|Capacidad de Carga : 4,000 LBS|Uso preventivo:No exponer a Acidos y Superficies con filo|";
 
     const contenedorQR = document
       .getElementById(`table${i}`)
