@@ -81,7 +81,7 @@ function generarTablasYQR() {
     // Generar el código QR para esta tabla
     const textoQR =
       "|Fecha de Fabricacion:" +
-      fechaFormateada +
+      fecha +
       " |No. de Serie: " + "Eco. " + 
       numeroSerie +
       " |Sistema de Sujecion: Red de carga " +
