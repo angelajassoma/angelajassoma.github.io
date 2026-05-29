@@ -30,13 +30,12 @@ function generarTablasYQR() {
   // Obtener los valores de los inputs y convertirlos a números enteros
   const serieInicial = parseInt(serieInicialInput.value);
   const serieFinal = parseInt(serieFinalInput.value);
-
-  // Obtener fecha directamente
-  const fecha = fechaInput.value;
   
   // Iterar sobre los datos y generar las tablas con códigos QR
   for (let i = serieInicial; i <= serieFinal; i++) {
     const numeroSerie = i.toString().padStart(2, "0");
+    // Obtener fecha directamente
+    const fecha = fechaInput.value;
     
     // Crear la tabla
     const tablaHTML = `
