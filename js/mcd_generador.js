@@ -7,7 +7,7 @@ const botonGenerar = document.querySelector(".btn-generar");
 const contenedorQR = document.querySelector(".qrcode");
 const botonDescargar = document.querySelector(".btn-descargar");
 const contenedor = document.getElementById("table");
-const fechaInput = document.getElementById("fecha").value;
+const fechaInput = document.getElementById("fecha");
 const fechaFormateada = formatearFecha(fechaInput);
 
 let QR;
@@ -57,7 +57,7 @@ function generarTablasYQR() {
   // Iterar sobre los datos y generar las tablas con códigos QR
   for (let i = serieInicial; i <= serieFinal; i++) {
     const numeroSerie = i.toString().padStart(2, "0");
-    const fechaFormateada = formatearFecha(fecha.value);
+    const fechaFormateada = formatearFecha(fechaInput.value);
     // Crear la tabla
     const tablaHTML = `
             <div class="table-table" >
