@@ -8,31 +8,8 @@ const contenedorQR = document.querySelector(".qrcode");
 const botonDescargar = document.querySelector(".btn-descargar");
 const contenedor = document.getElementById("table");
 const fechaInput = document.getElementById("fecha");
-const fechaFormateada = formatearFecha(fechaInput);
 
 let QR;
-
-//Función para formatear fecha
-function formatearFecha(fechaInput) {
-  const partes = fechaInput.split("/");
-
-  if (partes.length !== 3) {
-    return fechaInput; // Devuelve la misma fecha si no está bien formateada
-  }
-
-  let [dia, mes, anio] = partes;
-
-  // Asegurar que día y mes tengan 2 dígitos
-  dia = dia.padStart(2, "0");
-  mes = mes.padStart(2, "0");
-
-  // Expandir año si solo tiene 2 dígitos
-  if (anio.length === 2) {
-    anio = "20" + anio;
-  }
-
-  return `${dia}/${mes}/${anio}`;
-}
 
 // Función para generar el código QR
 function generarCodigoQR(texto, contenedorQR) {
@@ -54,10 +31,13 @@ function generarTablasYQR() {
   const serieInicial = parseInt(serieInicialInput.value);
   const serieFinal = parseInt(serieFinalInput.value);
 
+  // Obtener fecha directamente
+  const fecha = fechaInput.value;
+  
   // Iterar sobre los datos y generar las tablas con códigos QR
   for (let i = serieInicial; i <= serieFinal; i++) {
     const numeroSerie = i.toString().padStart(2, "0");
-    const fechaFormateada = formatearFecha(fechaInput.value);
+    
     // Crear la tabla
     const tablaHTML = `
             <div class="table-table" >
@@ -84,7 +64,7 @@ function generarTablasYQR() {
                         </tr>
                         <tr>
                             <td class="a5">Fecha de Fabricación:</td>
-                            <td class="fecha-tabla b5">${fechaFormateada}</td>
+                            <td class="fecha-tabla b5">${fecha}</td>
                         </tr>
                       </tbody>
                     </table>
